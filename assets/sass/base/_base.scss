@@ -1,0 +1,220 @@
+/**
+ * Global styles applied to all non-woocommerce theme components. Includes styles for;
+ *
+ * Typography
+ * Header
+ * Footer
+ * Main content area
+ * Accessiblity helper classes
+ * 404
+ * Comments
+ * Content (posts etc)
+ * Forms
+ * Media
+ * Menus
+ * pagination
+ * Post formats
+ * Widgets
+ */
+
+
+body,
+button,
+input,
+textarea {
+	color: $color_body;
+	font-family: $base-font;
+	line-height: 1.618;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	
+	font-family: $header-font;	
+
+	
+}
+
+img{
+	display:inline-block;
+	vertical-align: middle;
+}
+
+.site-header{
+	box-shadow: 2px 0 3px rgba(0, 0, 0, 0.3);
+	background-color: #ffffff;
+	border-bottom:0;
+}
+
+.site-branding {
+	.site-title {
+		font-size: 2em;
+		letter-spacing: -1px;
+		margin: 0;
+
+		a {
+			font-weight: 400;
+		}
+	}
+
+	.site-description {
+		font-size: ms(-1);
+		display: none;
+	}
+}
+
+.main_flat_desc{
+	text-align:left;
+}
+
+#map-canvas{
+	margin-bottom: ms(5);
+}
+
+.home.page {
+	#content{margin-top: -77px;}
+	site-header{
+		background: transparent;
+	}
+	
+	.entry-header{ display:none}
+	.content-area{margin-bottom: 0 !important;}
+	.site-header{
+		margin-bottom: 0 !important;
+	} 
+	.site-main{
+				margin-bottom: 0 !important;
+	}
+	.hentry {
+    margin-bottom:0 !important;
+}
+}
+
+.term-description{text-align:left}
+
+
+
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button,
+.added_to_cart {
+
+	border-radius: 25px;
+
+	
+}
+
+
+
+
+
+/** Acount Area */
+
+.current-account-area {
+	display: none;
+	float: right;
+}
+
+.current-account-toggle {
+	cursor: pointer;
+	position: relative;
+}
+
+.current-account-avatar,
+.current-account-name {
+	display: inline-block;
+}
+
+.current-account-avatar {
+	margin-right: 10px;
+}
+
+.current-account-avatar img {
+	border-radius: 50%;
+	width: 45px;
+	height: 45px;
+}
+
+.tertiary .current-account-avatar img,
+.secondary .current-account-avatar img {
+	width: 20px;
+	height: 20px;
+	margin-top: -4px;
+}
+
+.current-account-name .display-name:after {
+	
+	font-size: 20px;
+	vertical-align: middle;
+	margin-left: 5px;
+	margin-top: -1px;
+	content: "\f151";
+}
+
+.navigation-bar-wrapper,
+.navigation-bar .current-account-avatar,
+.navigation-bar .current-account-name .display-name,
+.nav-current-account-user-dropdown,
+.nav-current-account-user-dropdown > *:before {
+	display: none;
+}
+
+.navigation-bar .current-account-area,
+.navigation-bar .nav-current-account-user-dropdown {
+	display: block;
+	float: none;
+}
+
+
+/**
+ * Images
+ *
+ * Mainly keep things responsive.
+ */
+
+
+/* Responsive images. Fluid images for posts, comments, and widgets */
+
+.comment-content img,
+.entry-content img,
+.entry-summary img,
+#site-header img,
+.widget img,
+.wp-caption {
+	max-width: 100%;
+}
+
+/**
+ * Make sure images with WordPress-added height and width attributes are
+ * scaled correctly.
+ */
+
+.comment-content img[height],
+.entry-content img,
+.entry-summary img,
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"],
+#site-header img {
+	height: auto;
+}
+
+img.size-full,
+img.size-large,
+.wp-post-image,
+.post-thumbnail img {
+	height: auto;
+	max-width: 100%;
+}
+

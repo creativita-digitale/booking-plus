@@ -1,59 +1,308 @@
-/*
-Error: File to import not found or unreadable: node_modules/susy/sass/susy.
-       Load paths:
-         /Applications/Adobe Dreamweaver CC 2017/Configuration/SassFrameworks/bourbon
-         /Applications/Adobe Dreamweaver CC 2017/Configuration/SassFrameworks/neat
-         /Applications/Adobe Dreamweaver CC 2017/Configuration/SassFrameworks/base
-        on line 39 of /Applications/MAMP/htdocs/erasmusverona_develop/engine/wp-content/themes/booking-plus/style.scss
+/*!
+Theme Name:   Booking Plus
+Author:       Creativit digitale
+Author URI:   https://www.creativitadigitale.com
+Template:     storefront
+Description: 
+Version:      	2.2.0
+License:      	GNU General Public License v2 or later
+License URI:  	http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  	booking-plus
+Tags:         	e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options
 
-34: // See: http://bourbon.io/docs/
-35: @import 'bourbon';
-36: 
-37: // Susy
-38: // Susy grid system. See: http://susydocs.oddbird.net/en/latest/
-39: @import 'node_modules/susy/sass/susy';
-40: 
-41: 
-42: // Utilities
-43: // Sass tools and helpers used across the project.
-44: @import 'assets/sass/utils/variables';
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
 
-Backtrace:
-/Applications/MAMP/htdocs/erasmusverona_develop/engine/wp-content/themes/booking-plus/style.scss:39
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/import_node.rb:45:in `import'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `map'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/root_node.rb:20:in `render'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/engine.rb:278:in `render'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:420:in `run'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/exec/base.rb:52:in `parse'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/exec/base.rb:19:in `parse!'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/bin/sass:13:in `<top (required)>'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/bin/sass:30:in `load'
-/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/bin/sass:30:in `<main>'
+Storefront is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+
+All sizing (typography, layout, padding/margins etc) are inspired by a modular scale that uses 1em as a base size with a 1.618 ratio.
+You can read more about the calculator we use in our sass here; https://github.com/modularscale/modularscale-sass 
+
+FontAwesome License: SIL Open Font License - http://scripts.sil.org/OFL
+Images License: GNU General Public License v2 or later
+
+======
+Note: Do not edit this file. If you wish to add your own CSS we strongly recommend creating your own child theme, or installing a custom CSS plugin.
+======
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: node_modules/susy/sass/susy.\A        Load paths:\A          /Applications/Adobe Dreamweaver CC 2017/Configuration/SassFrameworks/bourbon\A          /Applications/Adobe Dreamweaver CC 2017/Configuration/SassFrameworks/neat\A          /Applications/Adobe Dreamweaver CC 2017/Configuration/SassFrameworks/base\A         on line 39 of /Applications/MAMP/htdocs/erasmusverona_develop/engine/wp-content/themes/booking-plus/style.scss\A \A 34: // See: http://bourbon.io/docs/\A 35: @import 'bourbon';\A 36: \A 37: // Susy\A 38: // Susy grid system. See: http://susydocs.oddbird.net/en/latest/\A 39: @import 'node_modules/susy/sass/susy';\A 40: \A 41: \A 42: // Utilities\A 43: // Sass tools and helpers used across the project.\A 44: @import 'assets/sass/utils/variables';"; }
+/**
+ * Global styles applied to all non-woocommerce theme components. Includes styles for;
+ *
+ * Typography
+ * Header
+ * Footer
+ * Main content area
+ * Accessiblity helper classes
+ * 404
+ * Comments
+ * Content (posts etc)
+ * Forms
+ * Media
+ * Menus
+ * pagination
+ * Post formats
+ * Widgets
+ */
+body,
+button,
+input,
+textarea {
+  color: #858585;
+  font-family: "proxima-nova", sans-serif;
+  line-height: 1.618;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", "Source Sans Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+
+img {
+  display: inline-block;
+  vertical-align: middle; }
+
+.site-header {
+  box-shadow: 2px 0 3px rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  border-bottom: 0; }
+
+.site-branding .site-title {
+  font-size: 2em;
+  letter-spacing: -1px;
+  margin: 0; }
+  .site-branding .site-title a {
+    font-weight: 400; }
+.site-branding .site-description {
+  font-size: 0.875em;
+  display: none; }
+
+.main_flat_desc {
+  text-align: left; }
+
+#map-canvas {
+  margin-bottom: 2.61792em; }
+
+.home.page #content {
+  margin-top: -77px; }
+.home.page site-header {
+  background: transparent; }
+.home.page .entry-header {
+  display: none; }
+.home.page .content-area {
+  margin-bottom: 0 !important; }
+.home.page .site-header {
+  margin-bottom: 0 !important; }
+.home.page .site-main {
+  margin-bottom: 0 !important; }
+.home.page .hentry {
+  margin-bottom: 0 !important; }
+
+.term-description {
+  text-align: left; }
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button,
+.added_to_cart {
+  border-radius: 25px; }
+
+/** Acount Area */
+.current-account-area {
+  display: none;
+  float: right; }
+
+.current-account-toggle {
+  cursor: pointer;
+  position: relative; }
+
+.current-account-avatar,
+.current-account-name {
+  display: inline-block; }
+
+.current-account-avatar {
+  margin-right: 10px; }
+
+.current-account-avatar img {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px; }
+
+.tertiary .current-account-avatar img,
+.secondary .current-account-avatar img {
+  width: 20px;
+  height: 20px;
+  margin-top: -4px; }
+
+.current-account-name .display-name:after {
+  font-size: 20px;
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-top: -1px;
+  content: "\f151"; }
+
+.navigation-bar-wrapper,
+.navigation-bar .current-account-avatar,
+.navigation-bar .current-account-name .display-name,
+.nav-current-account-user-dropdown,
+.nav-current-account-user-dropdown > *:before {
+  display: none; }
+
+.navigation-bar .current-account-area,
+.navigation-bar .nav-current-account-user-dropdown {
+  display: block;
+  float: none; }
+
+/**
+ * Images
+ *
+ * Mainly keep things responsive.
+ */
+/* Responsive images. Fluid images for posts, comments, and widgets */
+.comment-content img,
+.entry-content img,
+.entry-summary img,
+#site-header img,
+.widget img,
+.wp-caption {
+  max-width: 100%; }
+
+/**
+ * Make sure images with WordPress-added height and width attributes are
+ * scaled correctly.
+ */
+.comment-content img[height],
+.entry-content img,
+.entry-summary img,
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"],
+#site-header img {
+  height: auto; }
+
+img.size-full,
+img.size-large,
+.wp-post-image,
+.post-thumbnail img {
+  height: auto;
+  max-width: 100%; }
+
+/**
+ * Strictly Layout Styles
+ */
+@media (min-width: 768px) {
+  .flat_listing_main_image {
+    border-radius: 3px;
+    position: relative;
+    width: 100%;
+    height: 515px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    overflow: hidden;
+    margin-bottom: 25px;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+
+  .entry-prop {
+    position: absolute;
+    bottom: 250px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    font-size: 34px;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+
+  .listing_main_image_location {
+    position: absolute;
+    bottom: 15px;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    z-index: 10;
+    font-size: 16px; }
+    .listing_main_image_location .listing_main_location {
+      line-height: 1.5;
+      width: 30.43478%;
+      float: left;
+      margin-right: 4.34783%; }
+    .listing_main_image_location .listing_main_bookable {
+      width: 30.43478%;
+      float: left;
+      margin-right: 4.34783%; }
+    .listing_main_image_location .listing_main_number {
+      width: 30.43478%;
+      float: right;
+      margin-right: 0; }
+
+  .site-header {
+    padding-top: 0;
+    padding-bottom: 0; }
+    .site-header .site-branding {
+      padding-top: 1.618em;
+      display: block;
+      width: 21.73913%;
+      float: left;
+      margin-right: 4.34783%;
+      clear: none; }
+      .site-header .site-branding img {
+        height: auto;
+        max-width: 100%;
+        max-height: none; }
+
+  .woocommerce-active .site-header .secondary-navigation {
+    display: none !important; }
+  .woocommerce-active .site-header .site-search {
+    display: none !important; }
+  .woocommerce-active .site-header .main-navigation {
+    width: 73.91304%;
+    float: right;
+    margin-right: 0;
+    clear: none; }
+  .woocommerce-active .site-header .site-header-cart {
+    display: none; } }
+.items_around {
+  border-radius: 3px;
+  text-align: center;
+  background: #eee;
+  margin-bottom: 1em;
+  display: block;
+  width: 21.73913%;
+  float: left; }
+  .items_around:nth-child(4n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0; }
+  .items_around:nth-child(4n + 2) {
+    margin-left: 26.08696%;
+    margin-right: -100%;
+    clear: none; }
+  .items_around:nth-child(4n + 3) {
+    margin-left: 52.17391%;
+    margin-right: -100%;
+    clear: none; }
+  .items_around:nth-child(4n + 4) {
+    margin-left: 78.26087%;
+    margin-right: -100%;
+    clear: none; }

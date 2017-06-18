@@ -1,0 +1,116 @@
+/**
+ * Strictly Layout Styles
+ */
+@include susy-media($desktop) {
+
+	.flat_listing_main_image {
+		border-radius: 3px;
+		
+		position: relative;
+		width: 100%;
+		height: 515px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50% 50%;
+		overflow: hidden;
+		margin-bottom:25px;
+		
+		@include span(full);
+	}
+	.entry-prop {
+		position: absolute;
+		bottom: 250px;
+text-align:center;
+		color: #fff;
+		text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+		
+		
+
+		z-index: 10;
+		
+		font-size: 34px;
+		@include span(full);
+	}
+
+	
+
+	.listing_main_image_location {
+		position: absolute;
+		bottom: 15px;
+		
+		color: #ffffff;
+		text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+		@include span(full);
+
+		z-index: 10;
+		font-size: 16px;
+		
+		
+			.listing_main_location{
+	
+			  //color: rgb(147, 147, 147);
+			  line-height: 1.5;
+			  
+			  @include span( 4 of 12);
+
+
+			}
+
+			.listing_main_bookable{
+				@include span( 4 of 12 );	
+			} 
+			.listing_main_number{
+				@include span( last 4 of 12);
+			}
+		
+	}
+	
+	.site-header {
+		padding-top: 0;
+		padding-bottom: 0;
+
+		.site-branding {
+			padding-top: ms(3);
+			display: block;
+			@include span(3 of 12);
+			clear: none;
+
+			img {
+				height: auto;
+				max-width: 100%;
+				max-height: none;
+			}
+		}
+	}
+	
+
+	.woocommerce-active {
+		.site-header {
+			.secondary-navigation {
+				display:none !important;
+			}
+
+			.site-search {
+				display:none !important;
+			}
+
+			.main-navigation {
+				@include span( last 9 of 12);
+				clear: none;
+			}
+
+			.site-header-cart {
+				display:none;
+			}
+		}}
+	}
+
+
+.items_around{
+	border-radius: 3px;
+	text-align:center;
+	background: #eee;
+	margin-bottom:ms(1);
+	display: block;
+	@include gallery(3 of 12);
+}
