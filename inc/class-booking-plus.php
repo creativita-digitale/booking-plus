@@ -98,9 +98,9 @@ class Booking_Plus {
 		
 		wp_style_add_data( 'storefront-child-style', 'rtl', 'replace' );
 
-		wp_enqueue_style( 'Poppins', '//fonts.googleapis.com/css?family=Poppins:400,700', array( 'storefront-style' ) );
+		wp_enqueue_style( 'Poppins', '//fonts.googleapis.com/css?family=Poppins:400,700', array( 'storefront-child-style' ) );
 		wp_enqueue_script( 'Proximanova', 'https://use.typekit.net/pwh1wmi.js', array( 'storefront-style' ) );
-		wp_enqueue_script( 'typekit', get_stylesheet_directory_uri() . '/assets/js/typekit.js', array( 'Proximanova'  ), '1.0', true );
+		wp_enqueue_script( 'typekit', get_stylesheet_directory_uri() . '/assets/js/typekit.min.js', array( 'Proximanova'  ), '1.0', true );
 		//wp_enqueue_script( 'instafeed', get_stylesheet_directory_uri() . '/assets/js/instafeed.min.js', array(  ), '1.4.1', true );
 		//wp_enqueue_script( 'app', get_stylesheet_directory_uri() . '/assets/js/app.js', array( 'instafeed' ), '1.0', true );
 		
@@ -114,7 +114,7 @@ class Booking_Plus {
 			$address = Booking_Plus_Flat::return_address();	
 
 			$handle 			=	'theme-map-scripts';
-			$src				=	get_stylesheet_directory_uri() . '/assets/js/scripts_map_search.js';
+			$src				=	get_stylesheet_directory_uri() . '/assets/js/scripts_map_search.min.js';
 			$dep				=	array('google-maps');
 			$ver 				=	'1';
 			$translation_array 	=	array(

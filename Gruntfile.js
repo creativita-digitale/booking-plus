@@ -234,9 +234,9 @@ module.exports = function( grunt ) {
 			},
 			frontend: {
 				options: {
-					potFilename: 'storefront.pot',
+					potFilename: 'booking-plus.pot',
 					exclude: [
-						'storefront/.*' // Exclude deploy directory
+						'booking-plus/.*' // Exclude deploy directory
 					]
 				}
 			}
@@ -245,7 +245,7 @@ module.exports = function( grunt ) {
 		// Check textdomain errors.
 		checktextdomain: {
 			options:{
-				text_domain: 'storefront',
+				text_domain: 'booking-plus',
 				keywords: [
 					'__:1,2d',
 					'_e:1,2d',
@@ -287,7 +287,7 @@ module.exports = function( grunt ) {
 					'!.DS_Store',
 					'!npm-debug.log'
 				],
-				dest: 'storefront',
+				dest: 'booking-plus',
 				expand: true,
 				dot: true
 			}

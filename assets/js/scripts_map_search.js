@@ -1,4 +1,4 @@
-
+var google, script_data, marker1, marker2;
 google.maps.event.addDomListener( window, 'load', gmaps_results_initialize );
 /**
  * Renders a Google Maps centered on Atlanta, Georgia. This is done by using
@@ -10,6 +10,8 @@ google.maps.event.addDomListener( window, 'load', gmaps_results_initialize );
  * @since    1.0.0
  */
 function gmaps_results_initialize() {
+	
+	'use strict';
     
     //https://tommcfarlin.com/refactoring-our-code-for-google-maps-in-wordpress
 	
@@ -17,7 +19,7 @@ function gmaps_results_initialize() {
 		return;
 	}
 
-	var geocoder, map, marker, address1, latitude, longitude;
+	var geocoder, map, marker,  latitude, longitude;
 	
 	
 	
@@ -26,7 +28,7 @@ function gmaps_results_initialize() {
 	
 	geocoder.geocode( { 'address': script_data.address1}, function(results, status) {
 
-	  if (status == google.maps.GeocoderStatus.OK) {
+	  if (status === google.maps.GeocoderStatus.OK) {
 	
 		  //return results;
 		  
@@ -36,7 +38,7 @@ function gmaps_results_initialize() {
 		map = new google.maps.Map( document.getElementById( script_data.map_tag ), {
 
 			zoom:           Number( script_data.zoom ),
-			center:         new google.maps.LatLng( latitude, longitude ),
+			center:         new google.maps.LatLng( latitude, longitude )
 
 		}); 
 		  

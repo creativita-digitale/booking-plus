@@ -1,0 +1,57 @@
+/**
+ * WooCommerce
+ */
+
+/**
+ * Imports
+ */
+@import 'bourbon';
+@import '../../../assets/sass/utils/variables';
+@import '../../../assets/sass/utils/mixins';
+@import '../../../node_modules/susy/sass/susy';
+@import '../../../assets/sass/vendors/modular-scale';
+
+
+
+/**
+	 * General full-width styles
+	 */
+	.storefront-full-width-content {
+		&.woocommerce-cart .entry-header,
+		&.woocommerce-checkout .entry-header,
+		&.woocommerce-account .entry-header,
+		.woocommerce-products-header {
+			text-align: center;
+			padding: 0 0 ms(2);
+
+			h1:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.up-sells,
+		.related.products {
+			> h2:first-child {
+				text-align: center;
+			}
+		}
+	}
+
+
+@include susy-media($desktop) {
+	
+// Full width single product
+	.storefront-full-width-content.single-product {
+		div.product {
+			
+			.woocommerce-product-gallery {
+				@include span(7 of 12);
+			}
+			.summary {
+				@include span(last 5 of 12);
+				margin-bottom: ms(6);
+			}
+		}
+	}
+
+}
