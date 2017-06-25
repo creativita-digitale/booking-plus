@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Booking Plus 2.2.0\n"
 "Report-Msgid-Bugs-To: "
 "https://github.com/creativita-digitale/booking-plus/issues\n"
-"POT-Creation-Date: 2017-06-18 20:52:54+00:00\n"
+"POT-Creation-Date: 2017-06-23 14:03:16+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,10 +13,6 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
-
-#: functions.php:22
-msgid "%1$s designed by %2$s."
-msgstr ""
 
 #: inc/class-navigation.php:77
 msgid "Guest"
@@ -203,6 +199,10 @@ msgstr ""
 
 #: woocommerce/checkout/review-order.php:106
 msgid "Monthly rent"
+msgstr ""
+
+#: woocommerce/single-product/price.php:26
+msgid "Montly rent "
 msgstr ""
 
 #: woocommerce/single-product/related.php:27

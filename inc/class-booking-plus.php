@@ -55,22 +55,17 @@ class Booking_Plus {
 		
 		}
 		
-// Unhook default Thematic functions
+	// Unhook default Thematic functions
 	public function unhook_functions() {
 		//remove_action( 'storefront_before_content',	'storefront_header_widget_region',	10 );
 		remove_action( 'storefront_header', 'storefront_product_search', 40 );
 		remove_action( 'storefront_header', 'storefront_site_branding', 20 );
 		add_action( 'storefront_header', 'storefront_site_branding', 43 );
-		
-		
-		
-			remove_action( 'storefront_header', 'storefront_header_cart', 		60 );
-			remove_action( 'after_setup_theme', 'custom_header_setup' );
-			remove_action( 'after_setup_theme', 	'storefront_custom_header_setup', 50 );
-			remove_action( 'storefront_footer', 	'storefront_credit', 20 );
-		
-			add_action( 'storefront_footer', 	'booking_credits', 20 );
-			
+		remove_action( 'storefront_header', 'storefront_header_cart', 		60 );
+		remove_action( 'after_setup_theme', 'custom_header_setup' );
+		remove_action( 'after_setup_theme', 'storefront_custom_header_setup', 50 );
+		remove_action( 'storefront_footer', 'storefront_credit', 20 );
+				
 	}
 	
 	
@@ -144,17 +139,6 @@ class Booking_Plus {
 		
 	}
 	
-	public function booking_credits (){
-		?>
-		<div class="site-info">
-			<?php echo esc_html( apply_filters( 'storefront_copyright_text', $content = '&copy; ' . get_bloginfo( 'name' ) . ' ' . date( 'Y' ) ) ); ?>
-			<?php if ( apply_filters( 'storefront_credit_link', true ) ) { ?>
-			
-			<?php } ?>
-		</div><!-- .site-info -->
-		<?php
-	
-	}
 
 }
 

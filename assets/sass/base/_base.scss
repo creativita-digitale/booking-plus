@@ -1,4 +1,4 @@
-/**
+	/**
  * Global styles applied to all non-woocommerce theme components. Includes styles for;
  *
  * Typography
@@ -100,7 +100,13 @@ img{
 
 .term-description{text-align:left}
 
-
+.primary-navigation {
+	
+	.current-menu-item{
+		
+		border-bottom: 10px solid $color_links;
+	}
+}
 
 
 button,
@@ -218,3 +224,6 @@ img.size-large,
 	max-width: 100%;
 }
 
+.entry-header .entry-title{
+	margin-top: ms(1);
+}
