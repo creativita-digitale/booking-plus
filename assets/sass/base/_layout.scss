@@ -103,6 +103,14 @@ text-align:center;
 				display:none;
 			}
 		}}
+	
+	
+		.gallery-item {
+		  @include gallery(1 of 8);
+		}
+		.gallery {
+		  @include clearfix;
+		}
 	}
 
 

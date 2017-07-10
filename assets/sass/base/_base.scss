@@ -227,3 +227,11 @@ img.size-large,
 .entry-header .entry-title{
 	margin-top: ms(1);
 }
+
+.gallery{
+	margin:0;
+	li{list-style-type:none}
+}
+.gallery-item {
+		  @include gallery(1 of 8);
+		}
