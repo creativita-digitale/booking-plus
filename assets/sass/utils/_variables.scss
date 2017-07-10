@@ -9,6 +9,59 @@ $ms-base:           1em, .875em;
 $ms-ratio:          1.618;
 
 
+@font-face {
+            font-family:"eufont";
+            src:url("../../fonts/eufont.eot?93e834946c6a24bca19116408a202bda");
+            src:url("../../fonts/eufont.eot?#iefix") format("embedded-opentype"),
+            url("../../fonts/eufont.woff?93e834946c6a24bca19116408a202bda") format("woff"),
+            url("../../fonts/eufont.ttf?93e834946c6a24bca19116408a202bda") format("truetype");
+            font-weight:normal;
+            font-style:normal;
+        }
+
+.icon-rent:before {
+    content: "\f141";
+}
+.icon-bills:before {
+    content: "\f10a";
+}
+.icon-wifi:before {
+    content: "\f15b";
+}
+.icon-maintenance:before {
+    content: "\f134";
+}
+.icon-cleaning:before {
+    content: "\f110";
+}
+.icon-furniture:before {
+    content: "\f128";
+}
+.icon-kitchen:before {
+    content: "\f12d";
+}
+
+.adv-icon--big {
+    font-size: 64px;
+}
+
+[class*=" icon-"]:before, [class^=icon-]:before {
+    font-family: eufont;
+    display: inline-block;
+    vertical-align: baseline;
+    font-weight: 400;
+    font-style: normal;
+    speak: none;
+    text-decoration: inherit;
+    text-transform: none;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
 // base color scheme
 $body-background: 	#ffffff;
 $color_body: 		#858585;
