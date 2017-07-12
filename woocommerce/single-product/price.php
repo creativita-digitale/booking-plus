@@ -23,4 +23,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 
 ?>
-<p class="price"><?php echo __('Montly rent ', 'booking-plus') . $product->get_price_html(); ?></p>
+<p class="price"><?php echo __('Montly rent ', 'booking-plus') . $product->get_price_html() .__(" (all inclusive) ", 'booking-plus') ; ?></p>
