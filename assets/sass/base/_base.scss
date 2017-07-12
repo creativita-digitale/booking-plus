@@ -233,5 +233,6 @@ img.size-large,
 	li{list-style-type:none}
 }
 .gallery-item {
+	color:#fff;
 		  @include gallery(1 of 8);
 		}
