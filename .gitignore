@@ -1,4 +1,8 @@
 .DS_Store
 node_modules/*
 _notes/*
+*/_notes/*
 *.xml
+woocommerce/_notes/*
+*/dwsync.xml
+woocommerce/_notes/dwsync.xml

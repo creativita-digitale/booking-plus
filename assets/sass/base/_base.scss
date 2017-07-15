@@ -236,3 +236,10 @@ img.size-large,
 	color:#fff;
 		  @include gallery(1 of 8);
 		}
+
+.textwhite{
+	
+	p,h1, h2, h3{
+		color:#fff;
+	}
+}

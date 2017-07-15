@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: Booking Plus 2.2.0\n"
 "Report-Msgid-Bugs-To: https://github.com/creativita-digitale/booking-plus/"
 "issues\n"
-"POT-Creation-Date: 2017-06-23 16:03+0200\n"
-"PO-Revision-Date: 2017-06-23 16:03+0200\n"
+"POT-Creation-Date: 2017-07-12 22:29+0200\n"
+"PO-Revision-Date: 2017-07-12 22:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "Language: it_IT\n"
@@ -19,11 +19,11 @@ msgstr ""
 
 #: inc/class-navigation.php:77
 msgid "Guest"
-msgstr ""
+msgstr "Ospite"
 
 #: inc/class-navigation.php:237
 msgid "Browse %s"
-msgstr ""
+msgstr "Sfoglia %s"
 
 #: inc/class-navigation.php:261
 msgid "Choose a %s"
@@ -131,6 +131,118 @@ msgstr ""
 msgid "Looking for more options?"
 msgstr ""
 
+#: woocommerce/booking-form/date-picker.php:5
+#: woocommerce/booking-form/datetime-picker.php:6
+#: woocommerce-bookings/booking-form/date-picker.php:5
+#: woocommerce-bookings/booking-form/datetime-picker.php:6
+msgid "F j, Y"
+msgstr ""
+
+#: woocommerce/booking-form/date-picker.php:9
+#: woocommerce/booking-form/datetime-picker.php:10
+#: woocommerce-bookings/booking-form/date-picker.php:9
+#: woocommerce-bookings/booking-form/datetime-picker.php:10
+msgid "Choose..."
+msgstr ""
+
+#: woocommerce/booking-form/date-picker.php:16
+#: woocommerce-bookings/booking-form/date-picker.php:16
+msgid "Start"
+msgstr ""
+
+#: woocommerce/booking-form/date-picker.php:21
+#: woocommerce/booking-form/date-picker.php:32
+#: woocommerce/booking-form/date-picker.php:46
+#: woocommerce/booking-form/date-picker.php:57
+#: woocommerce/booking-form/datetime-picker.php:16
+#: woocommerce/booking-form/datetime-picker.php:27
+#: woocommerce-bookings/booking-form/date-picker.php:21
+#: woocommerce-bookings/booking-form/date-picker.php:32
+#: woocommerce-bookings/booking-form/date-picker.php:46
+#: woocommerce-bookings/booking-form/date-picker.php:57
+#: woocommerce-bookings/booking-form/datetime-picker.php:16
+#: woocommerce-bookings/booking-form/datetime-picker.php:27
+msgid "mm"
+msgstr ""
+
+#: woocommerce/booking-form/date-picker.php:22
+#: woocommerce/booking-form/date-picker.php:33
+#: woocommerce/booking-form/date-picker.php:47
+#: woocommerce/booking-form/date-picker.php:58
+#: woocommerce/booking-form/datetime-picker.php:17
+#: woocommerce/booking-form/datetime-picker.php:28
+#: woocommerce-bookings/booking-form/date-picker.php:22
+#: woocommerce-bookings/booking-form/date-picker.php:33
+#: woocommerce-bookings/booking-form/date-picker.php:47
+#: woocommerce-bookings/booking-form/date-picker.php:58
+#: woocommerce-bookings/booking-form/datetime-picker.php:17
+#: woocommerce-bookings/booking-form/datetime-picker.php:28
+msgid "Month"
+msgstr ""
+
+#: woocommerce/booking-form/date-picker.php:24
+#: woocommerce/booking-form/date-picker.php:29
+#: woocommerce/booking-form/date-picker.php:49
+#: woocommerce/booking-form/date-picker.php:54
+#: woocommerce/booking-form/datetime-picker.php:19
+#: woocommerce/booking-form/datetime-picker.php:24
+#: woocommerce-bookings/booking-form/date-picker.php:24
+#: woocommerce-bookings/booking-form/date-picker.php:29
+#: woocommerce-bookings/booking-form/date-picker.php:49
+#: woocommerce-bookings/booking-form/date-picker.php:54
+#: woocommerce-bookings/booking-form/datetime-picker.php:19
+#: woocommerce-bookings/booking-form/datetime-picker.php:24
+msgid "dd"
+msgstr ""
+
+#: woocommerce/booking-form/date-picker.php:25
+#: woocommerce/booking-form/date-picker.php:30
+#: woocommerce/booking-form/date-picker.php:50
+#: woocommerce/booking-form/date-picker.php:55
+#: woocommerce/booking-form/datetime-picker.php:20
+#: woocommerce/booking-form/datetime-picker.php:25
+#: woocommerce-bookings/booking-form/date-picker.php:25
+#: woocommerce-bookings/booking-form/date-picker.php:30
+#: woocommerce-bookings/booking-form/date-picker.php:50
+#: woocommerce-bookings/booking-form/date-picker.php:55
+#: woocommerce-bookings/booking-form/datetime-picker.php:20
+#: woocommerce-bookings/booking-form/datetime-picker.php:25
+msgid "Day"
+msgstr ""
+
+#: woocommerce/booking-form/date-picker.php:36
+#: woocommerce/booking-form/date-picker.php:61
+#: woocommerce/booking-form/datetime-picker.php:32
+#: woocommerce-bookings/booking-form/date-picker.php:36
+#: woocommerce-bookings/booking-form/date-picker.php:61
+#: woocommerce-bookings/booking-form/datetime-picker.php:32
+msgid "YYYY"
+msgstr ""
+
+#: woocommerce/booking-form/date-picker.php:37
+#: woocommerce/booking-form/date-picker.php:62
+#: woocommerce/booking-form/datetime-picker.php:33
+#: woocommerce-bookings/booking-form/date-picker.php:37
+#: woocommerce-bookings/booking-form/date-picker.php:62
+#: woocommerce-bookings/booking-form/datetime-picker.php:33
+msgid "Year"
+msgstr ""
+
+#: woocommerce/booking-form/date-picker.php:43
+#: woocommerce-bookings/booking-form/date-picker.php:43
+msgid "End"
+msgstr ""
+
+#: woocommerce/booking-form/datetime-picker.php:38
+#: woocommerce-bookings/booking-form/datetime-picker.php:38
+msgid "Time"
+msgstr ""
+
+#: woocommerce/booking-form/datetime-picker.php:40
+#: woocommerce-bookings/booking-form/datetime-picker.php:40
+msgid "Choose a date above to see available times."
+msgstr ""
+
 #: woocommerce/cart/cart-totals.php:28
 msgid "Cart totals"
 msgstr ""
@@ -162,6 +274,7 @@ msgid "Monthly Rent"
 msgstr "Affitto mensile"
 
 #: woocommerce/cart/cart.php:37 woocommerce/cart/cart.php:102
+#: woocommerce-bookings/emails/customer-booking-confirmed.php:74
 msgid "Quantity"
 msgstr ""
 
@@ -170,6 +283,7 @@ msgid "Remove this item"
 msgstr ""
 
 #: woocommerce/cart/cart.php:78
+#: woocommerce-bookings/emails/customer-booking-confirmed.php:73
 msgid "Product"
 msgstr ""
 
@@ -178,8 +292,9 @@ msgid "Available on backorder"
 msgstr ""
 
 #: woocommerce/cart/cart.php:96
+#: woocommerce-bookings/emails/customer-booking-confirmed.php:75
 msgid "Price"
-msgstr ""
+msgstr "Prezzo"
 
 #: woocommerce/cart/cart.php:137
 msgid "Coupon:"
@@ -205,13 +320,269 @@ msgstr "Conferma la prenotazione"
 msgid "Monthly rent"
 msgstr "Affitto mensile"
 
+#: woocommerce/loop/price.php:27
+msgid "All inclusive"
+msgstr "Tutto compreso"
+
 #: woocommerce/single-product/price.php:26
 msgid "Montly rent "
 msgstr "Affitto mensile "
 
+#: woocommerce/single-product/price.php:26
+msgid " (all inclusive) "
+msgstr " (tutto compreso) "
+
 #: woocommerce/single-product/related.php:27
 msgid "Related rooms"
 msgstr "Stanze correlate"
+
+#: woocommerce-bookings/emails/admin-booking-cancelled.php:12
+#: woocommerce-bookings/emails/plain/admin-booking-cancelled.php:9
+msgid ""
+"The following booking has been cancelled by the customer. The details of the "
+"cancelled booking can be found below."
+msgstr ""
+
+#: woocommerce-bookings/emails/admin-booking-cancelled.php:18
+#: woocommerce-bookings/emails/admin-new-booking.php:25
+#: woocommerce-bookings/emails/customer-booking-cancelled.php:21
+#: woocommerce-bookings/emails/customer-booking-confirmed.php:21
+#: woocommerce-bookings/emails/customer-booking-notification.php:14
+#: woocommerce-bookings/emails/customer-booking-reminder.php:18
+msgid "Booked Product"
+msgstr ""
+
+#: woocommerce-bookings/emails/admin-booking-cancelled.php:23
+#: woocommerce-bookings/emails/admin-new-booking.php:29
+#: woocommerce-bookings/emails/customer-booking-cancelled.php:25
+#: woocommerce-bookings/emails/customer-booking-confirmed.php:25
+#: woocommerce-bookings/emails/customer-booking-notification.php:18
+#: woocommerce-bookings/emails/customer-booking-reminder.php:22
+msgid "Booking ID"
+msgstr ""
+
+#: woocommerce-bookings/emails/admin-booking-cancelled.php:28
+#: woocommerce-bookings/emails/admin-new-booking.php:34
+#: woocommerce-bookings/emails/customer-booking-cancelled.php:30
+#: woocommerce-bookings/emails/customer-booking-confirmed.php:30
+#: woocommerce-bookings/emails/customer-booking-notification.php:23
+#: woocommerce-bookings/emails/customer-booking-reminder.php:27
+msgid "Booking Type"
+msgstr ""
+
+#: woocommerce-bookings/emails/admin-booking-cancelled.php:33
+#: woocommerce-bookings/emails/admin-new-booking.php:39
+#: woocommerce-bookings/emails/customer-booking-cancelled.php:35
+#: woocommerce-bookings/emails/customer-booking-confirmed.php:35
+#: woocommerce-bookings/emails/customer-booking-notification.php:28
+#: woocommerce-bookings/emails/customer-booking-reminder.php:32
+msgid "Booking Start Date"
+msgstr ""
+
+#: woocommerce-bookings/emails/admin-booking-cancelled.php:37
+#: woocommerce-bookings/emails/admin-new-booking.php:43
+#: woocommerce-bookings/emails/customer-booking-cancelled.php:39
+#: woocommerce-bookings/emails/customer-booking-confirmed.php:39
+#: woocommerce-bookings/emails/customer-booking-notification.php:32
+#: woocommerce-bookings/emails/customer-booking-reminder.php:36
+msgid "Booking End Date"
+msgstr ""
+
+#: woocommerce-bookings/emails/admin-booking-cancelled.php:47
+#: woocommerce-bookings/emails/admin-new-booking.php:53
+#: woocommerce-bookings/emails/customer-booking-cancelled.php:49
+#: woocommerce-bookings/emails/customer-booking-confirmed.php:49
+#: woocommerce-bookings/emails/customer-booking-notification.php:42
+#: woocommerce-bookings/emails/customer-booking-reminder.php:46
+#: woocommerce-bookings/emails/plain/admin-booking-cancelled.php:29
+#: woocommerce-bookings/emails/plain/admin-new-booking.php:39
+#: woocommerce-bookings/emails/plain/customer-booking-cancelled.php:33
+#: woocommerce-bookings/emails/plain/customer-booking-confirmed.php:33
+#: woocommerce-bookings/emails/plain/customer-booking-notification.php:31
+#: woocommerce-bookings/emails/plain/customer-booking-reminder.php:33
+msgid "Person(s)"
+msgstr ""
+
+#: woocommerce-bookings/emails/admin-booking-cancelled.php:58
+#: woocommerce-bookings/emails/admin-new-booking.php:68
+#: woocommerce-bookings/emails/plain/admin-booking-cancelled.php:36
+msgid "You can view and edit this booking in the dashboard here: %s"
+msgstr ""
+
+#: woocommerce-bookings/emails/admin-new-booking.php:10
+#: woocommerce-bookings/emails/plain/admin-new-booking.php:12
+msgid ""
+"A booking has been made by %s and is awaiting your approval. The details of "
+"this booking are as follows:"
+msgstr ""
+
+#: woocommerce-bookings/emails/admin-new-booking.php:12
+#: woocommerce-bookings/emails/plain/admin-new-booking.php:14
+msgid ""
+"A new booking has been made by %s. The details of this booking are as "
+"follows:"
+msgstr ""
+
+#: woocommerce-bookings/emails/admin-new-booking.php:65
+#: woocommerce-bookings/emails/plain/admin-new-booking.php:47
+msgid ""
+"This booking is awaiting your approval. Please check it and inform the "
+"customer if the date is available or not."
+msgstr ""
+
+#: woocommerce-bookings/emails/customer-booking-cancelled.php:13
+#: woocommerce-bookings/emails/customer-booking-confirmed.php:13
+#: woocommerce-bookings/emails/customer-booking-reminder.php:10
+#: woocommerce-bookings/emails/plain/customer-booking-cancelled.php:10
+#: woocommerce-bookings/emails/plain/customer-booking-confirmed.php:10
+#: woocommerce-bookings/emails/plain/customer-booking-reminder.php:10
+msgid "Hello %s"
+msgstr ""
+
+#: woocommerce-bookings/emails/customer-booking-cancelled.php:16
+#: woocommerce-bookings/emails/plain/customer-booking-cancelled.php:13
+msgid ""
+"We are sorry to say that your booking could not be confirmed and has been "
+"cancelled. The details of the cancelled booking can be found below."
+msgstr ""
+
+#: woocommerce-bookings/emails/customer-booking-cancelled.php:60
+#: woocommerce-bookings/emails/plain/customer-booking-cancelled.php:40
+msgid "Please contact us if you have any questions or concerns."
+msgstr ""
+
+#: woocommerce-bookings/emails/customer-booking-confirmed.php:16
+msgid ""
+"Your booking has been confirmed. The details of your booking are shown below."
+msgstr ""
+
+#: woocommerce-bookings/emails/customer-booking-confirmed.php:63
+#: woocommerce-bookings/emails/plain/customer-booking-confirmed.php:42
+msgid "To pay for this booking please use the following link: %s"
+msgstr ""
+
+#: woocommerce-bookings/emails/customer-booking-confirmed.php:63
+msgid "Pay for booking"
+msgstr ""
+
+#: woocommerce-bookings/emails/customer-booking-confirmed.php:68
+#: woocommerce-bookings/myaccount/my-bookings.php:17
+msgid "Order"
+msgstr ""
+
+#: woocommerce-bookings/emails/customer-booking-reminder.php:13
+msgid "This is a reminder that your booking will take place tomorrow."
+msgstr ""
+
+#: woocommerce-bookings/emails/plain/admin-booking-cancelled.php:13
+#: woocommerce-bookings/emails/plain/admin-new-booking.php:23
+#: woocommerce-bookings/emails/plain/customer-booking-cancelled.php:17
+#: woocommerce-bookings/emails/plain/customer-booking-confirmed.php:17
+#: woocommerce-bookings/emails/plain/customer-booking-notification.php:15
+#: woocommerce-bookings/emails/plain/customer-booking-reminder.php:17
+msgid "Booked: %s"
+msgstr ""
+
+#: woocommerce-bookings/emails/plain/admin-booking-cancelled.php:14
+#: woocommerce-bookings/emails/plain/admin-new-booking.php:24
+#: woocommerce-bookings/emails/plain/customer-booking-cancelled.php:18
+#: woocommerce-bookings/emails/plain/customer-booking-confirmed.php:18
+#: woocommerce-bookings/emails/plain/customer-booking-notification.php:16
+#: woocommerce-bookings/emails/plain/customer-booking-reminder.php:18
+msgid "Booking ID: %s"
+msgstr ""
+
+#: woocommerce-bookings/emails/plain/admin-booking-cancelled.php:17
+#: woocommerce-bookings/emails/plain/admin-new-booking.php:27
+#: woocommerce-bookings/emails/plain/customer-booking-cancelled.php:21
+#: woocommerce-bookings/emails/plain/customer-booking-confirmed.php:21
+#: woocommerce-bookings/emails/plain/customer-booking-notification.php:19
+#: woocommerce-bookings/emails/plain/customer-booking-reminder.php:21
+msgid "Booking Type: %s"
+msgstr ""
+
+#: woocommerce-bookings/emails/plain/admin-booking-cancelled.php:20
+#: woocommerce-bookings/emails/plain/admin-new-booking.php:30
+#: woocommerce-bookings/emails/plain/customer-booking-cancelled.php:24
+#: woocommerce-bookings/emails/plain/customer-booking-confirmed.php:24
+#: woocommerce-bookings/emails/plain/customer-booking-notification.php:22
+#: woocommerce-bookings/emails/plain/customer-booking-reminder.php:24
+msgid "Booking Start Date: %s"
+msgstr ""
+
+#: woocommerce-bookings/emails/plain/admin-booking-cancelled.php:21
+#: woocommerce-bookings/emails/plain/admin-new-booking.php:31
+#: woocommerce-bookings/emails/plain/customer-booking-cancelled.php:25
+#: woocommerce-bookings/emails/plain/customer-booking-confirmed.php:25
+#: woocommerce-bookings/emails/plain/customer-booking-notification.php:23
+#: woocommerce-bookings/emails/plain/customer-booking-reminder.php:25
+msgid "Booking End Date: %s"
+msgstr ""
+
+#: woocommerce-bookings/emails/plain/admin-booking-cancelled.php:30
+#: woocommerce-bookings/emails/plain/admin-new-booking.php:40
+#: woocommerce-bookings/emails/plain/customer-booking-cancelled.php:34
+#: woocommerce-bookings/emails/plain/customer-booking-confirmed.php:34
+#: woocommerce-bookings/emails/plain/customer-booking-notification.php:32
+#: woocommerce-bookings/emails/plain/customer-booking-reminder.php:34
+msgid "%s: %d"
+msgstr ""
+
+#: woocommerce-bookings/emails/plain/customer-booking-confirmed.php:13
+msgid ""
+"Your booking for has been confirmed. The details of your booking are shown "
+"below."
+msgstr ""
+
+#: woocommerce-bookings/emails/plain/customer-booking-confirmed.php:47
+msgid "Order number: %s"
+msgstr ""
+
+#: woocommerce-bookings/emails/plain/customer-booking-confirmed.php:48
+msgid "Order date: %s"
+msgstr ""
+
+#: woocommerce-bookings/emails/plain/customer-booking-notification.php:11
+msgid "The details of your booking are shown below."
+msgstr ""
+
+#: woocommerce-bookings/emails/plain/customer-booking-reminder.php:13
+msgid ""
+"This is a reminder that your booking will take place tomorrow. The details "
+"of your booking are shown below."
+msgstr ""
+
+#: woocommerce-bookings/myaccount/my-bookings.php:10
+msgid "My bookings"
+msgstr "Le mie prenotazioni"
+
+#: woocommerce-bookings/myaccount/my-bookings.php:15
+msgid "ID"
+msgstr ""
+
+#: woocommerce-bookings/myaccount/my-bookings.php:16
+msgid "Booked"
+msgstr "Prenotato"
+
+#: woocommerce-bookings/myaccount/my-bookings.php:18
+msgid "Start Date"
+msgstr "Data d’inizio"
+
+#: woocommerce-bookings/myaccount/my-bookings.php:19
+msgid "End Date"
+msgstr "Data di fine"
+
+#: woocommerce-bookings/myaccount/my-bookings.php:20
+msgid "Status"
+msgstr ""
+
+#: woocommerce-bookings/myaccount/my-bookings.php:47
+msgid "Cancel"
+msgstr ""
+
+#: woocommerce-bookings/single-product/add-to-cart/booking.php:17
+msgid "Your browser must support JavaScript in order to make a booking."
+msgstr ""
 
 #. Theme Name of the plugin/theme
 msgid "Booking Plus"
