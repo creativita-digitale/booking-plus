@@ -95,6 +95,7 @@ class Booking_Plus {
     
     $thumbnail_id = get_woocommerce_term_meta( $term->term_id, 'thumbnail_id', true );
 	    $image = wp_get_attachment_image( $thumbnail_id , 'thumbnail');
+		
 					
 					
  
@@ -104,7 +105,9 @@ class Booking_Plus {
 					 'lng' => Booking_Plus_Flat::get_lng($term->term_id),
 					 'description' => $term->description,
 					'link' => esc_url( get_term_link( $term )),
-					'img' => $image
+					'img' => $image,
+					
+					'link_text' => __('Read more', 'woocommerce')
 					 );
 				}
 

@@ -14,7 +14,7 @@
 		var json = script_data.markers;
 //window.alert(json);
 		// Creating a global infoWindow object that will be reused by all markers
-		var infoWindow = new google.maps.InfoWindow();
+		var infoWindow = new google.maps.InfoWindow( {maxWidth: 600 });
 		 var bounds = new google.maps.LatLngBounds();
 		
 		// Looping through the JSON data
@@ -23,11 +23,15 @@
 				latLng = new google.maps.LatLng(data.lat, data.lng);
 bounds.extend( latLng);
 			// Creating a marker and putting it on the map
+			
+			
 			var marker = new google.maps.Marker({
 				position: latLng,
+				
 				animation: google.maps.Animation.DROP,
 				map: map,
-				title: data.title
+				title: data.title,
+				
 			});
 			 
             
@@ -39,18 +43,19 @@ bounds.extend( latLng);
 				// Attaching a click event to the current marker
 				google.maps.event.addListener(marker, "click", function(e) {
 					
-					 var contentString = '<div id="content">'+'<h1 id="firstHeading class="firstHeading">'+data.title +'</h1>'+
+					 var contentString = '<div id="infoWindow">'+'<h1 id="firstHeading class="firstHeading">'+data.title +'</h1>'+
 						'<div id="bodyImage">'+	data.img + '</div>' +				
 						 '<div id="bodyContent">'+
 											'<p>' + data.description +'</p>'+
-											'<p><a href="' + data.link + '">'
-											 + data.link + '</a> '+
+											'<p><a class="product_type_booking add_to_cart_button" href="' + data.link + '">'
+											 + data.link_text + '</a> '+
 											'</p>'+
 											'</div>'+
 											'</div>';
 					
 					infoWindow.setContent(contentString );
 					infoWindow.open(map, marker);
+					
 				});
 
 

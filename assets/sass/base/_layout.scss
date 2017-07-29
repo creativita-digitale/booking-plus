@@ -122,3 +122,8 @@ text-align:center;
 	display: block;
 	@include gallery(3 of 12);
 }
+#infoWindow {
+	#bodyImage{@include span( 3 of 12);}
+	#bodyContent{@include span( last 9 of 12);}	
+}
+
