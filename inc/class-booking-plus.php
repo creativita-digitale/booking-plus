@@ -87,15 +87,16 @@ class Booking_Plus {
 		if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
 			
 			
+			
 			foreach ($terms as $term) :
-
-			$term_array[] = array(
-				 'title' => $term->name, 
-				 'lat' => Booking_Plus_Flat::get_lat($term->term_id), 
-				 'lng' => Booking_Plus_Flat::get_lng($term->term_id),
-				 'description' => $term->description			
-				 );
-				
+				if( ! is_null ( Booking_Plus_Flat::get_lat($term->term_id)) && class_exists('Booking_Plus_Flat')){
+					$term_array[] = array(
+					 'title' => $term->name, 
+					 'lat' => Booking_Plus_Flat::get_lat($term->term_id), 
+					 'lng' => Booking_Plus_Flat::get_lng($term->term_id),
+					 'description' => $term->description			
+					 );
+				}
 
 			endforeach;
 
