@@ -79,6 +79,35 @@ class Booking_Plus {
 		wp_enqueue_style( 'storefront-style', get_template_directory_uri() . '/style.css', $storefront_version );
 	}
 
+	public function get_map_marker(){
+		// ottengo i dati della categoria woocommerce
+		$terms = get_terms( 'product_cat' );
+		
+		// verifico che non sia vuota
+		if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+			
+			
+			foreach ($terms as $term) :
+
+			$term_array[] = array(
+				 'title' => $term->name, 
+				 'lat' => Booking_Plus_Flat::get_lat($term->term_id), 
+				 'lng' => Booking_Plus_Flat::get_lng($term->term_id),
+				 'description' => $term->description			
+				 );
+				
+
+			endforeach;
+
+		}
+		
+		
+		$group = json_encode($term_array);
+		//wp_die( var_dump($group) );
+		return $group;
+		// {"0":{"a":1,"b":2},"1":{"c":3},"2":{"d":4}}
+		
+	}
 	/**
 	 * Enqueue Storechild Styles
 	 * @return void
@@ -104,21 +133,27 @@ class Booking_Plus {
 		if( is_page_template( 'page-templates/template-search.php' ) ){
 			
 			
+		
+			$handle 			=	'gmaps';
+			$src				=	get_stylesheet_directory_uri() . '/assets/js/gmaps.js';
+			$dep				=	array('jquery','google-maps');
+			$ver 				=	'1.3.3';
+
+			wp_register_script( $handle	, $src, $dep, $ver, true );
+			wp_enqueue_script( $handle); 
+			
 			
 		
 			$address = Booking_Plus_Flat::return_address();	
 
 			$handle 			=	'theme-map-scripts';
-			$src				=	get_stylesheet_directory_uri() . '/assets/js/scripts_map_search.min.js';
-			$dep				=	array('google-maps');
+			$src				=	get_stylesheet_directory_uri() . '/assets/js/scripts_map_search.js';
+			$dep				=	array('jquery', 'google-maps', 'gmaps');
 			$ver 				=	'1';
 			$translation_array 	=	array(
-										'address1'	=> 'Arena di Verona, piazza Brà Verona',
-										'address2'	=> 'Università degli studi di Verona',
-										'address2'	=> 'verona',
-										'zoom' 		=> 17,
-										'map_tag'	=> 'search_map'
+										'markers' => json_decode($this->get_map_marker())
 									);
+			
 
 
 			wp_register_script( $handle	, $src, $dep, $ver, true );

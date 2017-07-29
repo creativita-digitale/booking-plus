@@ -1,93 +1,47 @@
-var google, script_data, marker1, marker2;
-google.maps.event.addDomListener( window, 'load', gmaps_results_initialize );
-/**
- * Renders a Google Maps centered on Atlanta, Georgia. This is done by using
- * the Latitude and Longitude for the city.
- *
- * Getting the coordinates of a city can easily be done using the tool availabled
- * at: http://www.latlong.net
- *
- * @since    1.0.0
- */
-function gmaps_results_initialize() {
-	
-	'use strict';
-    
-    //https://tommcfarlin.com/refactoring-our-code-for-google-maps-in-wordpress
-	
-    if ( null === document.getElementById( script_data.map_tag ) ) {
-		return;
-	}
+(function() {
 
-	var geocoder, map, marker,  latitude, longitude;
-	
-	
-	
-	
-	geocoder = new google.maps.Geocoder();
-	
-	geocoder.geocode( { 'address': script_data.address1}, function(results, status) {
+	window.onload = function() {
 
-	  if (status === google.maps.GeocoderStatus.OK) {
-	
-		  //return results;
-		  
-		latitude = results[0].geometry.location.lat();
-		longitude = results[0].geometry.location.lng();
-		
-		map = new google.maps.Map( document.getElementById( script_data.map_tag ), {
+		// Creating a new map
+		var map = new google.maps.Map(document.getElementById("search_map"), {
+          center: new google.maps.LatLng(57.9, 14.6),
+          zoom: 6,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
 
-			zoom:           Number( script_data.zoom ),
-			center:         new google.maps.LatLng( latitude, longitude )
 
-		}); 
-		  
-		
-		 // Place a marker in Atlanta
-		marker = new google.maps.Marker({
+		// Creating the JSON data
+		var json = script_data.markers;
+window.alert(json);
+		// Creating a global infoWindow object that will be reused by all markers
+		var infoWindow = new google.maps.InfoWindow();
 
-			position:  new google.maps.LatLng( latitude,longitude ),
-			map:      map
+		// Looping through the JSON data
+		for (var i = 0, length = json.length; i < length; i++) {
+			var data = json[i],
+				latLng = new google.maps.LatLng(data.lat, data.lng);
 
-		}); 
-		  
-		 // Place a marker in Atlanta
-		marker1 = new google.maps.Marker({
+			// Creating a marker and putting it on the map
+			var marker = new google.maps.Marker({
+				position: latLng,
+				map: map,
+				title: data.title
+			});
 
-			position:  new google.maps.LatLng( 45.437398, -11.003376 ),
-			map:      map
+			// Creating a closure to retain the correct data, notice how I pass the current data in the loop into the closure (marker, data)
+			(function(marker, data) {
 
-		});   
-		  
-		 // Place a marker in Atlanta
-		marker2 = new google.maps.Marker({
+				// Attaching a click event to the current marker
+				google.maps.event.addListener(marker, "click", function(e) {
+					infoWindow.setContent(data.description);
+					infoWindow.open(map, marker);
+				});
 
-			position:  new google.maps.LatLng(45.403002, 10.996242),
-			map:      map
 
-		});     
-		  
-	  } 
-	});
-	
-	
-	
-	
-	
-	
-	
-	
-	
-    
-    /*// Add an InfoWindow for Atlanta
-	infowindow = new google.maps.InfoWindow();
-	google.maps.event.addListener( marker, 'click', ( function( marker ) {
+			})(marker, data);
 
-		return function() {
-			infowindow.open( map, marker );
 		}
 
-	})( marker ));
-      */  
+	}
 
-}
+})();
