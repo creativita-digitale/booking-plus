@@ -90,11 +90,21 @@ class Booking_Plus {
 			
 			foreach ($terms as $term) :
 				if( ! is_null ( Booking_Plus_Flat::get_lat($term->term_id)) && class_exists('Booking_Plus_Flat')){
-					$term_array[] = array(
+					
+					// The $term is an object, so we don't need to specify the $taxonomy.
+    
+    $thumbnail_id = get_woocommerce_term_meta( $term->term_id, 'thumbnail_id', true );
+	    $image = wp_get_attachment_image( $thumbnail_id , 'thumbnail');
+					
+					
+ 
+    			$term_array[] = array(
 					 'title' => $term->name, 
 					 'lat' => Booking_Plus_Flat::get_lat($term->term_id), 
 					 'lng' => Booking_Plus_Flat::get_lng($term->term_id),
-					 'description' => $term->description			
+					 'description' => $term->description,
+					'link' => esc_url( get_term_link( $term )),
+					'img' => $image
 					 );
 				}
 

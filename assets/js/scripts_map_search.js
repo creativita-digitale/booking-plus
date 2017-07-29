@@ -25,18 +25,31 @@ bounds.extend( latLng);
 			// Creating a marker and putting it on the map
 			var marker = new google.maps.Marker({
 				position: latLng,
+				animation: google.maps.Animation.DROP,
 				map: map,
 				title: data.title
 			});
 			 
-                   
+            
+      
 
 			// Creating a closure to retain the correct data, notice how I pass the current data in the loop into the closure (marker, data)
 			(function(marker, data) {
 
 				// Attaching a click event to the current marker
 				google.maps.event.addListener(marker, "click", function(e) {
-					infoWindow.setContent(data.description);
+					
+					 var contentString = '<div id="content">'+'<h1 id="firstHeading class="firstHeading">'+data.title +'</h1>'+
+						'<div id="bodyImage">'+	data.img + '</div>' +				
+						 '<div id="bodyContent">'+
+											'<p>' + data.description +'</p>'+
+											'<p><a href="' + data.link + '">'
+											 + data.link + '</a> '+
+											'</p>'+
+											'</div>'+
+											'</div>';
+					
+					infoWindow.setContent(contentString );
 					infoWindow.open(map, marker);
 				});
 
