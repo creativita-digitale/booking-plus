@@ -23,7 +23,8 @@ class Booking_Plus {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_child_styles' ), 99 );
 		remove_action ('storefront_header', array( $this, 'storefront_secondary_navigation' ), 30 );
 		add_action('init', array( $this, 'unhook_functions' ) );
-		
+		add_action('woocommerce_before_shop_loop_item_title',array( $this, 'show_flat_avaiable_flash' ),10);
+				
 		try{
 		if( ! class_exists( 'WooCommerce' ) ){
 				 throw new Exception( 'woocommerce non installato' );
@@ -40,6 +41,22 @@ class Booking_Plus {
 		}
 	}
 
+	
+	public function show_flat_avaiable_flash(){
+		global $post, $product;
+	//echo $product->id ; 
+		
+		 if (  booking_sevice_plus::room_is_bookable($product->id) === false ) : ?>
+	
+	<?php echo apply_filters( 'woocommerce_sale_flash', '<span class="onsale">' . esc_html__( 'Available', 'booking-plus' ) . '</span>', $post, $product ); ?>
+
+<?php else:?>
+	<?php echo apply_filters( 'woocommerce_sale_flash', '<span class="onsale">' . esc_html__( 'Currently not available', 'booking-plus' ) . '</span>', $post, $product ); ?>	
+<?php endif;
+		
+	}
+	
+	
 	
 	public function check_plugins() {
 			
@@ -65,7 +82,7 @@ class Booking_Plus {
 		remove_action( 'after_setup_theme', 'custom_header_setup' );
 		remove_action( 'after_setup_theme', 'storefront_custom_header_setup', 50 );
 		remove_action( 'storefront_footer', 'storefront_credit', 20 );
-				
+		
 	}
 	
 	
