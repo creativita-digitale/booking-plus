@@ -247,3 +247,22 @@ img.size-large,
 .woocommerce-MyAccount-navigation-link--downloads{
 	display:none
 }
+
+.product-type-booking{
+	.cart{
+
+		background-color: #f8f8f8;
+		padding: 20px !important;
+
+		border-radius: 3px;
+	}
+
+	.wc-bookings-booking-form label {
+		display: block;
+		font-weight: 600;
+		padding-bottom: 15px;
+	}
+	.wc-bookings-booking-form{
+		padding-bottom: 15px;
+	}
+}
