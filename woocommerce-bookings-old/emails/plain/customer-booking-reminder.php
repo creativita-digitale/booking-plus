@@ -1,16 +1,16 @@
 <?php
 /**
- * Customer booking confirmed email
+ * Customer booking reminder email
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 echo "= " . $email_heading . " =\n\n";
 
 if ( $booking->get_order() ) {
-	echo sprintf( __( 'Hello %s', 'woocommerce-bookings' ), ( is_callable( array( $booking->get_order(), 'get_billing_first_name' ) ) ? $booking->get_order()->get_billing_first_name() : $booking->get_order()->billing_first_name ) ) . "\n\n";
+	echo sprintf( __( 'Hello %s', 'woocommerce-bookings' ), $booking->get_order()->billing_first_name ) . "\n\n";
 }
 
-echo __(  'We are sorry to say that your booking could not be confirmed and has been cancelled. The details of the cancelled booking can be found below.', 'woocommerce-bookings' ) . "\n\n";
+echo __(  'This is a reminder that your booking will take place tomorrow. The details of your booking are shown below.', 'woocommerce-bookings' ) . "\n\n";
 
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n";
 
@@ -36,7 +36,5 @@ if ( $booking->has_persons() ) {
 }
 
 echo "\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n";
-
-echo __( 'Please contact us if you have any questions or concerns.', 'woocommerce-bookings' ) . "\n";
 
 echo apply_filters( 'woocommerce_email_footer_text', get_option( 'woocommerce_email_footer_text' ) );

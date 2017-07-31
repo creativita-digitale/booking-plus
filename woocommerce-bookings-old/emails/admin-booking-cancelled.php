@@ -1,6 +1,6 @@
 <?php
 /**
- * Customer booking cancelled email
+ * Admin booking cancelled email
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
@@ -9,18 +9,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php do_action( 'woocommerce_email_header', $email_heading ); ?>
 
-<?php if ( $booking->get_order() ) : ?>
-	<p><?php printf( __( 'Hello %s', 'woocommerce-bookings' ), ( is_callable( array( $booking->get_order(), 'get_billing_first_name' ) ) ? $booking->get_order()->get_billing_first_name() : $booking->get_order()->billing_first_name ) ); ?></p>
-<?php endif; ?>
-
-<p><?php _e( 'We are sorry to say that your booking could not be confirmed and has been cancelled. The details of the cancelled booking can be found below.', 'woocommerce-bookings' ); ?></p>
+<p><?php _e( 'The following booking has been cancelled by the customer. The details of the cancelled booking can be found below.', 'woocommerce-bookings' ); ?></p>
 
 <table cellspacing="0" cellpadding="6" style="width: 100%; border: 1px solid #eee;" border="1" bordercolor="#eee">
 	<tbody>
-		<tr>
-			<th scope="row" style="text-align:left; border: 1px solid #eee;"><?php _e( 'Booked Product', 'woocommerce-bookings' ); ?></th>
-			<td style="text-align:left; border: 1px solid #eee;"><?php echo $booking->get_product()->get_title(); ?></td>
-		</tr>
+		<?php if ( $booking->get_product() ) : ?>
+			<tr>
+				<th scope="row" style="text-align:left; border: 1px solid #eee;"><?php _e( 'Booked Product', 'woocommerce-bookings' ); ?></th>
+				<td style="text-align:left; border: 1px solid #eee;"><?php echo $booking->get_product()->get_title(); ?></td>
+			</tr>
+		<?php endif; ?>
 		<tr>
 			<th style="text-align:left; border: 1px solid #eee;" scope="row"><?php _e( 'Booking ID', 'woocommerce-bookings' ); ?></th>
 			<td style="text-align:left; border: 1px solid #eee;"><?php echo $booking->get_id(); ?></td>
@@ -57,6 +55,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</tbody>
 </table>
 
-<p><?php _e( 'Please contact us if you have any questions or concerns.', 'woocommerce-bookings' ); ?></p>
+<p><?php echo make_clickable( sprintf( __( 'You can view and edit this booking in the dashboard here: %s', 'woocommerce-bookings' ), admin_url( 'post.php?post=' . $booking->get_id() . '&action=edit' ) ) ); ?></p>
 
 <?php do_action( 'woocommerce_email_footer' ); ?>

@@ -1,19 +1,23 @@
 <?php
 /**
- * Customer booking cancelled email
+ * Admin new booking email
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
+}
+
+if ( wc_booking_order_requires_confirmation( $booking->get_order() ) && $booking->get_status() == 'pending-confirmation' ) {
+	$opening_paragraph = __( 'A booking has been made by %s and is awaiting your approval. The details of this booking are as follows:', 'woocommerce-bookings' );
+} else {
+	$opening_paragraph = __( 'A new booking has been made by %s. The details of this booking are as follows:', 'woocommerce-bookings' );
 }
 ?>
 
 <?php do_action( 'woocommerce_email_header', $email_heading ); ?>
 
-<?php if ( $booking->get_order() ) : ?>
-	<p><?php printf( __( 'Hello %s', 'woocommerce-bookings' ), ( is_callable( array( $booking->get_order(), 'get_billing_first_name' ) ) ? $booking->get_order()->get_billing_first_name() : $booking->get_order()->billing_first_name ) ); ?></p>
+<?php if ( $booking->get_order() && $booking->get_order()->billing_first_name && $booking->get_order()->billing_last_name ) : ?>
+	<p><?php printf( $opening_paragraph, $booking->get_order()->billing_first_name . ' ' . $booking->get_order()->billing_last_name ); ?></p>
 <?php endif; ?>
-
-<p><?php _e( 'We are sorry to say that your booking could not be confirmed and has been cancelled. The details of the cancelled booking can be found below.', 'woocommerce-bookings' ); ?></p>
 
 <table cellspacing="0" cellpadding="6" style="width: 100%; border: 1px solid #eee;" border="1" bordercolor="#eee">
 	<tbody>
@@ -57,6 +61,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</tbody>
 </table>
 
-<p><?php _e( 'Please contact us if you have any questions or concerns.', 'woocommerce-bookings' ); ?></p>
+<?php if ( wc_booking_order_requires_confirmation( $booking->get_order() ) && $booking->get_status() == 'pending-confirmation' ) : ?>
+<p><?php _e( 'This booking is awaiting your approval. Please check it and inform the customer if the date is available or not.', 'woocommerce-bookings' ); ?></p>
+<?php endif; ?>
+
+<p><?php echo make_clickable( sprintf( __( 'You can view and edit this booking in the dashboard here: %s', 'woocommerce-bookings' ), admin_url( 'post.php?post=' . $booking->get_id() . '&action=edit' ) ) ); ?></p>
 
 <?php do_action( 'woocommerce_email_footer' ); ?>

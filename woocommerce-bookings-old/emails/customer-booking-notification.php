@@ -1,19 +1,12 @@
 <?php
 /**
- * Customer booking cancelled email
+ * Customer booking notification
  */
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
-?>
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
 
 <?php do_action( 'woocommerce_email_header', $email_heading ); ?>
 
-<?php if ( $booking->get_order() ) : ?>
-	<p><?php printf( __( 'Hello %s', 'woocommerce-bookings' ), ( is_callable( array( $booking->get_order(), 'get_billing_first_name' ) ) ? $booking->get_order()->get_billing_first_name() : $booking->get_order()->billing_first_name ) ); ?></p>
-<?php endif; ?>
-
-<p><?php _e( 'We are sorry to say that your booking could not be confirmed and has been cancelled. The details of the cancelled booking can be found below.', 'woocommerce-bookings' ); ?></p>
+<?php echo wpautop( wptexturize( $notification_message ) ); ?>
 
 <table cellspacing="0" cellpadding="6" style="width: 100%; border: 1px solid #eee;" border="1" bordercolor="#eee">
 	<tbody>
@@ -56,7 +49,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php endif; ?>
 	</tbody>
 </table>
-
-<p><?php _e( 'Please contact us if you have any questions or concerns.', 'woocommerce-bookings' ); ?></p>
 
 <?php do_action( 'woocommerce_email_footer' ); ?>

@@ -16,9 +16,7 @@ $month_before_day = strpos( __( 'F j, Y' ), 'F' ) < strpos( __( 'F j, Y' ), 'j' 
 			<span><?php echo esc_html( apply_filters( 'woocommerce_bookings_date_picker_start_label', __( 'Start', 'woocommerce-bookings' ) ) ); ?>:</span><br />
 		<?php endif; ?>
 
-		<?php 
-		// woocommerce_bookings_mdy_format filter to choose between month/day/year and day/month/year format
-		if ( $month_before_day && apply_filters( 'woocommerce_bookings_mdy_format', true ) ) : ?>
+		<?php if ( $month_before_day ) : ?>
 		<label>
 			<input type="text" name="<?php echo $name; ?>_month" placeholder="<?php _e( 'mm', 'woocommerce-bookings' ); ?>" size="2" class="booking_date_month" />
 			<span><?php _e( 'Month', 'woocommerce-bookings' ); ?></span>
