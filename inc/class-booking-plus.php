@@ -24,6 +24,7 @@ class Booking_Plus {
 		remove_action ('storefront_header', array( $this, 'storefront_secondary_navigation' ), 30 );
 		add_action('init', array( $this, 'unhook_functions' ) );
 		//add_action('woocommerce_before_shop_loop_item_title',array( $this, 'show_flat_avaiable_flash' ),10);
+		add_action( 'widgets_init', array( $this,  'booking_plus_widgets_init' ) );
 				
 		try{
 		if( ! class_exists( 'WooCommerce' ) ){
@@ -41,6 +42,25 @@ class Booking_Plus {
 		}
 	}
 
+	function booking_plus_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Room  Sidebar', 'theme_name' ),
+        'id'            => 'sidebar-50',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+ 
+    register_sidebar( array(
+        'name'          => __( 'Flat Sidebar', 'theme_name' ),
+        'id'            => 'sidebar-51',
+        'before_widget' => '<ul><li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li></ul>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+}
 	
 	public function show_flat_avaiable_flash(){
 		
