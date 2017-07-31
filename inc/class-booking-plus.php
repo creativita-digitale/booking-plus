@@ -83,6 +83,7 @@ class Booking_Plus {
 		remove_action( 'after_setup_theme', 'custom_header_setup' );
 		remove_action( 'after_setup_theme', 'storefront_custom_header_setup', 50 );
 		remove_action( 'storefront_footer', 'storefront_credit', 20 );
+		remove_action ( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 		
 	}
 	
