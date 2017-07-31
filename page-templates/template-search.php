@@ -11,6 +11,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<p><?php _e('Click on markers below to get more info.','booking-plus'); ?></p>
 			<div id="search_map" style="height:400px"></div>
 
 			<?php while ( have_posts() ) : the_post();
