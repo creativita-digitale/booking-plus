@@ -46,7 +46,7 @@ class Booking_Plus {
 		global $post, $product;
 	//echo $product->id ; 
 		
-		 if (  booking_sevice_plus::room_is_bookable($product->id) === false ) : ?>
+		 if (  booking_sevice_plus::room_is_bookable( $product->get_id() ) === false ) : ?>
 	
 	<?php echo apply_filters( 'woocommerce_sale_flash', '<span class="onsale">' . esc_html__( 'Available', 'booking-plus' ) . '</span>', $post, $product ); ?>
 
