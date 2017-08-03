@@ -266,3 +266,20 @@ img.size-large,
 		padding-bottom: 15px;
 	}
 }
+
+
+	.cart-info {
+		
+		background: opacify(lightblue, 0.9);
+		padding: 10px;
+		color: #fff;
+		border: 1px solid lightblue;
+		border-radius: 3px;
+	}
+
+form.cart{
+	.cart-info {
+		font-size: 0.75em;	
+	margin-top: 10px;
+	}
+}

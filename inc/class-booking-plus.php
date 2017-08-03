@@ -25,7 +25,13 @@ class Booking_Plus {
 		add_action('init', array( $this, 'unhook_functions' ) );
 		//add_action('woocommerce_before_shop_loop_item_title',array( $this, 'show_flat_avaiable_flash' ),10);
 		add_action( 'widgets_init', array( $this,  'booking_plus_widgets_init' ) );
-				
+		
+		add_action( 'woocommerce_review_order_after_submit', array( $this,  'checkout_warning' ) );
+		
+		add_action( 'woocommerce_after_add_to_cart_button', array( $this,  'checkout_warning' ) );
+		
+		add_action( 'woocommerce_after_cart_totals', array( $this,  'checkout_warning' ) );
+		
 		try{
 		if( ! class_exists( 'WooCommerce' ) ){
 				 throw new Exception( 'woocommerce non installato' );
@@ -42,6 +48,12 @@ class Booking_Plus {
 		}
 	}
 
+	function checkout_warning(){
+		?>
+		<p class="cart-info info"><?php _e('Click to proceed, nothing will be charged to you and reservation can be cancelled anytime, our Customer Service will contact you.','booking-plus'); ?></p>
+		<?php
+	}
+	
 	function booking_plus_widgets_init() {
     register_sidebar( array(
         'name'          => __( 'Room  Sidebar', 'theme_name' ),
