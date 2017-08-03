@@ -122,7 +122,7 @@ text-align:center;
 .items_around{
 	border-radius: 3px;
 	text-align:left;
-	background: #eee;
+	
 	margin-bottom:ms(1);
 	display: block;
 	padding:5px;
@@ -130,6 +130,7 @@ text-align:center;
 	 @include clearfix;
 	.mainIconWrapper{
 		@include span( 2 of 12);
+		background: #eee;
 	}
 	.primaryInfo{
 		@include span( last 10 of 12);
