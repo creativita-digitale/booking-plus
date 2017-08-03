@@ -16,7 +16,12 @@
 		margin-bottom:25px;
 		
 		@include span(full);
+		
+		
 	}
+	
+	.inquiry-area{@include span( 6 of 12);}
+	.foursquare{@include span( last 6 of 12);}
 	.entry-prop {
 		position: absolute;
 		bottom: 250px;
@@ -116,11 +121,19 @@ text-align:center;
 
 .items_around{
 	border-radius: 3px;
-	text-align:center;
+	text-align:left;
 	background: #eee;
 	margin-bottom:ms(1);
 	display: block;
-	@include gallery(3 of 12);
+	padding:5px;
+	//@include gallery(6 of 12);
+	 @include clearfix;
+	.mainIconWrapper{
+		@include span( 2 of 12);
+	}
+	.primaryInfo{
+		@include span( last 10 of 12);
+	}
 }
 #infoWindow {
 	#bodyImage{@include span( 3 of 12);}

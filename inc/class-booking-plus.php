@@ -31,6 +31,7 @@ class Booking_Plus {
 		add_action( 'woocommerce_after_add_to_cart_button', array( $this,  'checkout_warning' ) );
 		
 		add_action( 'woocommerce_after_cart_totals', array( $this,  'checkout_warning' ) );
+		add_action ('woocommerce_after_main_content', array($this,'flat_sidebar'),9);
 		
 		try{
 		if( ! class_exists( 'WooCommerce' ) ){
@@ -48,6 +49,11 @@ class Booking_Plus {
 		}
 	}
 
+		function flat_sidebar(){
+			echo'<div id="secondary" class="inquiry-area" role="complementary">';
+			dynamic_sidebar('flat-sidebar');
+			 echo '</div>';
+		}
 	function checkout_warning(){
 		?>
 		<p class="cart-info info"><?php _e('Click to proceed, nothing will be charged to you and reservation can be cancelled anytime, our Customer Service will contact you.','booking-plus'); ?></p>
@@ -55,23 +61,17 @@ class Booking_Plus {
 	}
 	
 	function booking_plus_widgets_init() {
+		
     register_sidebar( array(
-        'name'          => __( 'Room  Sidebar', 'theme_name' ),
-        'id'            => 'sidebar-50',
+        'name'          => __( 'Flat  Sidebar', 'booking-plus' ),
+        'id'            => 'flat-sidebar',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget'  => '</aside>',
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
     ) );
  
-    register_sidebar( array(
-        'name'          => __( 'Flat Sidebar', 'theme_name' ),
-        'id'            => 'sidebar-51',
-        'before_widget' => '<ul><li id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</li></ul>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
-    ) );
+  
 }
 	
 	public function show_flat_avaiable_flash(){
